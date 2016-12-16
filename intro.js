@@ -9,7 +9,9 @@
 	});
 
 	items.addEventListener('click', function (e) {
-		e.target.remove();
+        if (e.target.tagName == 'LI') {
+            e.target.remove();
+        }
 	});
 
     var greenDiv = document.getElementById('div1');
