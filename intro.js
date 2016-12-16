@@ -1,4 +1,6 @@
 (function () {
+    /////////////////////////////////////////////////////////////////
+    // INTERACTIVE ITEM LIST: ////////////////////////////////////////
 	var items = document.getElementById('thelist');
 	var button = document.getElementById('add-btn');
 
@@ -44,5 +46,29 @@
 
     blueDiv.addEventListener('mouseenter', function () {
         heading.setAttribute('class', 'blue');
+    });
+
+    /////////////////////////////////////////////////////////////////
+    // FIBONACCI LIST: //////////////////////////////////////////////
+
+    // Cache fibonacci numbers as we calculate them:
+    var fibNums = [0, 1, 1];
+    var fibonacci = function (n) {
+        if (n < fibNums.length) {
+            return fibNums[n];
+        }
+        var result = fibonacci(n - 1) + fibonacci(n - 2);
+        fibNums[n] = result;
+        return result;
+    };
+
+    // Fibonacci items:
+    var fibs = document.getElementById('secondlist');
+    var fibBtn = document.getElementById('add-btn-2');
+
+    fibBtn.addEventListener('click', function () {
+        var item = document.createElement('li');
+        item.innerHTML = "" + fibonacci(fibs.childElementCount + 1);
+        fibs.appendChild(item);
     });
 }());
