@@ -1,6 +1,4 @@
 (function () {
-	var heading = document.getElementById('h');
-
 	var items = document.getElementById('thelist');
 	var button = document.getElementById('add-btn');
 
@@ -13,4 +11,22 @@
 	items.addEventListener('click', function (e) {
 		e.target.remove();
 	});
+
+    var greenDiv = document.getElementById('div1');
+    var blackDiv = document.getElementById('div2');
+    var blueDiv = document.querySelector('div.blue');
+
+    var heading = document.getElementById('h');
+
+    greenDiv.addEventListener('mouseenter', function () {
+        heading.setAttribute('class', 'green');
+    });
+
+    blackDiv.addEventListener('mouseenter', function () {
+        heading.setAttribute('class', '');
+    });
+
+    blueDiv.addEventListener('mouseenter', function () {
+        heading.setAttribute('class', 'blue');
+    });
 }());
