@@ -32,22 +32,6 @@
         }
     });
 
-    var greenDiv = document.getElementById('div1');
-    var blackDiv = document.getElementById('div2');
-    var blueDiv = document.querySelector('div.blue');
-
-    greenDiv.addEventListener('mouseenter', function () {
-        heading.setAttribute('class', 'green');
-    });
-
-    blackDiv.addEventListener('mouseenter', function () {
-        heading.setAttribute('class', '');
-    });
-
-    blueDiv.addEventListener('mouseenter', function () {
-        heading.setAttribute('class', 'blue');
-    });
-
     /////////////////////////////////////////////////////////////////
     // FIBONACCI LIST: //////////////////////////////////////////////
 
